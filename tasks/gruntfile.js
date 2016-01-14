@@ -1,14 +1,14 @@
 module.exports = function (grunt) {
+    "use strict";
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
-		lib: grunt.file.readJSON('modules.json'),
 		concat: {
 			options: {
-				separator: ';',
+				separator: ';'
 			},
 			dist: {
-				src: ['../modules/*.js','../modules/**/*.js', '../modules/**/**/*.js'],
-				dest: 'build/built.js',
+				src: ['../components/*.js', '../components/**/*.js', '../components/**/**/*.js'],
+				dest: 'build/built.js'
 			}
 		},
 		uglify: {
@@ -20,19 +20,19 @@ module.exports = function (grunt) {
 				dest: '../www/js/<%= pkg.name %>.min.js'
 			}
 		},
-		sass: { // Task
-			dist: { // Target
-				options: { // Target options
+		sass: {
+			dist: {
+				options: {
 					style: 'expanded'
 				},
 				files: {
-					'build/styles.css': '../styles/main.scss', // 'destination': 'source'
+					'build/styles.css': '../styles/main.scss'
 				}
 			}
 		},
 		cssmin: {
 			options: {
-				keepSpecialComments: 0,
+				keepSpecialComments: 0
 			},
 			target: {
 				files: [{
@@ -41,11 +41,11 @@ module.exports = function (grunt) {
 					src: ['*.css', '*.min.css'],
 					dest: '../www/css',
 					ext: '.min.css'
-    }]
+                }]
 			}
 		},
-		clean: {
-			js: ["build","../www/data", "../www/templates"]
+        clean: {
+			js: ["build", "../www/data", "../www/templates"]
 		},
 		htmlmin: {
 			options: {
@@ -53,24 +53,24 @@ module.exports = function (grunt) {
 				collapseWhitespace: true
 			},
 			partials: {
-				files: grunt.file.expand(['../modules/*', '../modules/**/*']).map(function (cwd) {
+				files: grunt.file.expand(['../components/*', '../components/**/*']).map(function (cwd) {
 					return {
 						expand: true,
 						cwd: cwd,
 						dest: "../www/templates/",
 						src: ["*.html"]
 					};
-				}),
+				})
 			}
 		},
 		watch: {
 			scripts: {
-				files: ['../styles/*','../modules/**/*'],
+				files: ['../styles/**/*', '../styles/*', '../components/**/*'],
 				tasks: ['clean', 'concat', 'uglify', 'sass', 'cssmin', 'htmlmin', 'copy', 'json-minify'],
 				options: {
-					debounceDelay: 3,
-				},
-			},
+					debounceDelay: 10
+				}
+			}
 		},
 		'json-minify': {
 			build: {
@@ -82,12 +82,12 @@ module.exports = function (grunt) {
 				files: [
 					{
 						expand: true,
-						src: ['../modules/**/*.json'],
+						src: ['../components/**/*.json'],
 						dest: '../www/data/',
-						flatten: true,
-					},
-    ],
-			},
+						flatten: true
+					}
+                ]
+			}
 		}
 	});
 
@@ -100,7 +100,11 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-json-minify');
 	grunt.loadNpmTasks('grunt-contrib-copy');
-	// Default task(s).
-    grunt.registerTask('default', ['clean', 'concat', 'uglify', 'sass', 'cssmin', 'htmlmin', 'copy', 'json-minify']);
+
+    
+    grunt.registerTask('css', ['sass', 'cssmin']);
+    grunt.registerTask('data', ['copy', 'json-minify']);
+    grunt.registerTask('clean', ['clean']);
+    grunt.registerTask('default', ['concat', 'uglify', 'sass', 'cssmin', 'htmlmin', 'copy', 'json-minify']);
 
 };
