@@ -1,39 +1,13 @@
-//
-// Variables
-//
 @import "variables";
 
-//
-// Fuentes
-//
 @import "fonts/roboto";       
 
-// 
-//External libraries
-//
 @import "ext/bootstrap";
 @import "ext/bootstrap-theme";
 @import "ext/reset";
 @import "ext/fa/font-awesome";
-// 
-// Frameworks Overrides
-//
+
 @import "ext/override"; 
 
-//
-// Utils
-//
 @import "util";
 @import "boxmodel";
-@import "components";
-
-//
-//Components
-//
-@import "../modules/core";
-
-//
-// TEST	- DEBUG DIV MODE
-//
-
-//@import "test";
