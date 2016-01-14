@@ -1,0 +1,13 @@
+{
+	"js": [
+	"../modules/*.js",
+	"../modules/navigation/*.js",
+	"../modules/header/*.js"
+],
+	"scss": [
+		"../modules/navigation/*.scss"
+	],
+	"html": [
+		"../modules/navigation/*.html"
+	]
+}
