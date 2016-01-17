@@ -1,5 +1,7 @@
-tasks/node_modules
-tasks/npm-debug.log
-tasks/.sass-cache
-tasks/build
+node_modules
+npm-debug.log
+build
 www/css
+www/components
+www/js
+.sass-cache
