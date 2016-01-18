@@ -1,0 +1,23 @@
+{
+  "name": "skaffolding-polymer",
+  "version": "1.0.0",
+  "homepage": "https://github.com/JSFDev/skaffolding-polymer-upstream",
+  "authors": [
+    "jsdev"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "webcomponentsjs": "~0.7.20",
+    "normalize.css": "~3.0.3",
+    "jquery": "~2.2.0",
+    "bootstrap": "~3.3.6",
+    "fontawesome": "~4.5.0"
+  }
+}

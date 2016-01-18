@@ -1,13 +1,4 @@
 @import "variables";
-
-@import "fonts/roboto";       
-
-@import "ext/bootstrap";
-@import "ext/bootstrap-theme";
-@import "ext/reset";
-@import "ext/fa/font-awesome";
-
-@import "ext/override"; 
-
+@import "../vendors/fontawesome/scss/font-awesome";
 @import "util";
 @import "boxmodel";
