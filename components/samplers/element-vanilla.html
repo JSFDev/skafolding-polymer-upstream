@@ -1,0 +1,17 @@
+<template>
+    <p>El componente mas sencillo del mundo</p>
+</template>
+
+<script>
+(function (w, d){
+
+var ElementVanilla = function (name) {
+        this.dom = (d._currentScript || d.currentScript).ownerDocument;
+        this.template =  this.dom.querySelector('template').content;
+        this.__proto__.name = name;
+    };
+
+w.elementVanilla = new ElementVanilla('plain element');
+
+})(window, document);
+</script>
