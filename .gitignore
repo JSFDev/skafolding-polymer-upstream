@@ -5,3 +5,4 @@ www/css
 www/components
 www/js
 .sass-cache
+vendors
