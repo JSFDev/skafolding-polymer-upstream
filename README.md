@@ -3,7 +3,7 @@
 - $git remote add upstream https://github.com/JSFDev/skafolding-polymer-upstream.git
 - $npm install
 - bower install
-- $grunt
+- $grunt start
 
 ### Development Git Flow
 - Commit changes, whatchout move or remove files
