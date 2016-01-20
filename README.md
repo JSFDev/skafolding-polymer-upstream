@@ -1,8 +1,9 @@
 ### Development environment
+- fork in github
 - $git clone https://github.com/[gitUserName]/skafolding-polymer-upstream.git skafolding-polymer
 - $git remote add upstream https://github.com/JSFDev/skafolding-polymer-upstream.git
 - $npm install
-- bower install
+- $bower install
 - $grunt start
 
 ### Development Git Flow
