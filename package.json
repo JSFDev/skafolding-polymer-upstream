@@ -19,6 +19,7 @@
     "grunt-modernizr": "~1.0.2",
     "load-grunt-configs": "~0.4.3",
     "load-grunt-tasks": "~3.4.0",
+    "sample-vanilla-element": "^1.0.0",
     "time-grunt": "~1.3.0"
   }
 }
