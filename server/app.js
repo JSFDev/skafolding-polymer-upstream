@@ -1,21 +1,13 @@
 var fs = require('fs');
 var http = require('http');
-
-function serveStatic (file, callback) {
-	fs.readFile('www/' + file, function (err, data) {
-		if (err) {
-		return callback(err);
-	}
-	callback(err, data.toString());	
-	})	
-}
+var assets = require('./assets/modules/assets.js');
 
 var server = http.createServer(function (request, response) {
 	console.log('Request: ' + request.url);
 
 	switch (request.url) {
 		case '/':
-			serveStatic('index.html', function (err, content) {
+			assets.serveStatic('index.html', function (err, content) {
 				response.end(content);
 			});
 			break
@@ -28,4 +20,4 @@ var server = http.createServer(function (request, response) {
 
 server.listen(3000, function () {
 	console.log('Servidor iniciado. Escuchando por el puerto 3000');
-})
+});
