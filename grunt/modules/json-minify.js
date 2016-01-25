@@ -1,5 +1,5 @@
 module.exports = {
 	build: {
-		files: 'www/data/*.json'
+		files: 'src/client/data/*.json'
 	}
 };

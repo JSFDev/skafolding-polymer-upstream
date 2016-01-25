@@ -3,7 +3,7 @@ module.exports = {
 		separator: ';'
 	},
 	dist: {
-		src: ['components/**/*.js'],
+		src: ['app/js/*.js', 'app/js/**/*.js'],
 		dest: 'build/built.js'
 	}
 };

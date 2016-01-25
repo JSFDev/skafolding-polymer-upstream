@@ -6,9 +6,9 @@ module.exports = {
 	partials: {
 		files: [{
 			expand: true,
-			cwd: 'components',
-			src: ["**/*.html"],
-			dest: "www/components/"
+			cwd: 'app',
+			src: ["elements/**/*.html"],
+			dest: "src/client"
 		}]
 	}
 };
