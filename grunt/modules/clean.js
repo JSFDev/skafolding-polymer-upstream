@@ -1,3 +1,3 @@
 module.exports = {
-	js: ["build", "www/js", "www/components"]
+	js: ["build/**", ".sass-cache/**", "client/styles/**", "client/elements/**", "client/js/**"]
 };

@@ -4,4 +4,8 @@ build
 .sass-cache
 public
 src/client/vendors
+src/client/js
+src/client/elements
+src/client/styles
+src/client/data
 

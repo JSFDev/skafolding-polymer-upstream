@@ -7,7 +7,7 @@ module.exports = {
 			expand: true,
 			cwd: 'build',
 			src: ['*.css', '*.min.css'],
-			dest: 'www/css',
+			dest: 'src/client/styles',
 			ext: '.min.css'
 		}]
 	}

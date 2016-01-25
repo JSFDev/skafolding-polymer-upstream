@@ -2,8 +2,8 @@ module.exports = {
 	main: {
 		files: [{
 			expand: true,
-			src: ['components/**/*.json'],
-			dest: 'www/data/',
+			src: ['app/data/*.json'],
+			dest: 'src/client/data/',
 			flatten: true
 		}]
 	}

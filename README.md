@@ -16,3 +16,6 @@
 ### Grunt Tasks
 - **$grunt start** : deploy resources
 - **$grunt css** : compile css
+## Polymer Elements
+- Yeoman and Polymer Generator: https://github.com/yeoman/generator-polymer
+- yo polymer:element my-element

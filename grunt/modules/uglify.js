@@ -4,6 +4,6 @@ module.exports = {
 	},
 	build: {
 		src: ['build/built.js'],
-		dest: 'www/js/built.min.js'
+		dest: 'src/client/js/app.min.js'
 	}
 };
